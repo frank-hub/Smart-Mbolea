@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-md navbar-dark green">
+    <a class="navbar-brand" href="#">Smart Mbolea</a>
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><strong>Today</strong></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="row" id=""> 
+  <div class="col-md-4"></div>
+  <div class="col-md-4" style="margin-top:10px;">
+    <!-- Default form login -->
+    <form class="text-center p-5">
+
+      <p class="h4 mb-4">Sign in</p>
+
+      <!-- Email -->
+      <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+      <!-- Password -->
+      <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+      <div class="d-flex justify-content-around">
+        <div>
+          <!-- Remember me -->
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+            <label class="custom-control-label text-white" for="defaultLoginFormRemember">Remember me</label>
+          </div>
+        </div>
+        <div>
+          <!-- Forgot password -->
+          <a href="" class="text-white">Forgot password?</a>
+        </div>
+      </div>
+
+      <!-- Sign in button -->
+      <button class="btn btn-success btn-block my-4" (click)="login()">Sign in</button>
+
+      <!-- Register -->
+      <p class="text-white">Not a member?
+        <a href="" class="text-white">Register</a>
+      </p>
+
+      <!-- Social login -->
+      <p class="text-white">or sign in with:</p>
+  <button class="btn btn-block btn-danger" (click)='doGoogleLogin()'>Login With Google</button>
+      
+    </form>
+    <!-- Default form login -->
+
+  
+  </div>
+  <div class="col-md-4">
+    <h2>Content from Firebase</h2>
+      <div>
+        <pre *ngFor="let item of items | async">{{item.content}} </pre>
+      </div>
+
+    <div class="container-fluid">
+      <div style="color: blue;">
+        <h1>{{title}</h1>
+        <h3>{{description}</h3>
+      </div>
+
+      <div style="width: 300px;">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="item">Item</label> <input type="text" class="form-control" placeholder="Enter content..." id="item"
+              required [(ngModel)]="itemValue" name="item">
+          </div>
+
+          <div class="btn-group">
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
