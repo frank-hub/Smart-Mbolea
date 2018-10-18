@@ -13,12 +13,14 @@ import { HomeComponent } from './home/home.component';
 import {AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { MyFarmComponent } from './my-farm/my-farm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MyFarmComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,10 @@ import { environment } from '../environments/environment';
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'farms',
+        component: MyFarmComponent
       },
       {
         path: '**',
