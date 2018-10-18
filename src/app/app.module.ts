@@ -15,12 +15,14 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { MyFarmComponent } from './my-farm/my-farm.component';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MyFarmComponent
+    MyFarmComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,9 @@ import { MyFarmComponent } from './my-farm/my-farm.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDAAki5brLKcXzOCpbGGT0wLE6JLh_1PmI'
+    }),
     RouterModule.forRoot([
       {
         path: '',
