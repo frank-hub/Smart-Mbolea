@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 
 import {AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { MyFarmComponent } from './my-farm/my-farm.component';
 
@@ -31,6 +32,7 @@ import { AgmCoreModule } from '@agm/core';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDAAki5brLKcXzOCpbGGT0wLE6JLh_1PmI'
     }),
