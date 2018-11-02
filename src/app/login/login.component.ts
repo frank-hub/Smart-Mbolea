@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { AngularFireDatabase } from 'angularfire2/database';
 import {AngularFireAuth} from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-login',
@@ -38,7 +37,7 @@ doGoogleLogin() {
   });
 }
   onSubmit() {
-    this.db.list('/items').push({ content: this.itemValue });
+    this.db.list('/item/product').push({ content: this.itemValue });
     this.itemValue = '';
   }
 }

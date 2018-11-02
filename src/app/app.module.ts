@@ -17,6 +17,7 @@ import { environment } from '../environments/environment';
 import { MyFarmComponent } from './my-farm/my-farm.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { SoilGrownCropsComponent } from './fertilizer/soil-grown-crops/soil-grown-crops.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AgmCoreModule } from '@agm/core';
     LoginComponent,
     HomeComponent,
     MyFarmComponent,
+    SoilGrownCropsComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,10 @@ import { AgmCoreModule } from '@agm/core';
       {
         path: 'farms',
         component: MyFarmComponent
+      },
+      {
+        path: 'home/soil_grown_crops',
+        component: SoilGrownCropsComponent
       },
       {
         path: '**',
